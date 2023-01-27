@@ -1,0 +1,19 @@
+<table id="customers">
+    <thead>
+        <tr>
+            <th>Product name</th>
+            <th>Product price</th>
+            <th>Product category</th>
+            <th>Product image</th>
+          </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td ngClass="product.price > 300 ? 'hight-price' : 'lower-price'" [TextBolder]="product.name" [Highlight]="product.price">{{product.name}}</td> <!--Attribut directive Highlight -->
+            <td>{{product.price}}</td>
+            <td>{{product.category}}</td>
+            <td> <img src={{product.imgUrl}}></td>
+        </tr>
+    </tbody>
+  </table>
+  
